@@ -21,9 +21,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [NewsController::class, 'showLatestNews']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
