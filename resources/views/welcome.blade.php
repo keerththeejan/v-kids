@@ -134,7 +134,8 @@
                 </div>
             </div>
             <div class="item">
-                <div class="slider-img"><img src="public/assets/images/slider/sli2.jpg" alt="" style="height:100%;">
+                <div class="slider-img"><img src="public/assets/images/slider/sli2.jpg" alt=""
+                        style="height:100%;">
                 </div>
                 <div class="container">
                     <div class="row">
@@ -148,10 +149,10 @@
                     </div>
                 </div>
             </div>
-            <div class="item" >
+            <div class="item">
                 <div class="slider-img"><img src="public/assets/images/slider/sli1.jpg" alt=""
                         style="height:100%;"></div>
-                <div class="container" >
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
                             <div class="slider-captions " id="about">
@@ -170,7 +171,7 @@
 
     <!--  ************************* About Us Starts Here ************************** -->
 
-    <div  class="about-us container-fluid">
+    <div class="about-us container-fluid">
         <div class="container">
 
             <div class="row natur-row no-margin w-100">
@@ -226,12 +227,12 @@
                     </p>
                 </div>
                 <div class="col-md-4 mv-img">
-                    <img src="public/assets/images/events/child2.jpg" alt="" >
+                    <img src="public/assets/images/events/child2.jpg" alt="">
                 </div>
             </div>
             <div class="row vision">
                 <div class="col-md-4 mv-img">
-                    <img src="public/assets/images/events/child3.jpg" alt="" >
+                    <img src="public/assets/images/events/child3.jpg" alt="">
                 </div>
                 <div class="col-md-8 mv-det">
                     <h1>Our Vision</h1>
@@ -262,16 +263,16 @@
                             children's learning and development. These organizations aim to ensure that every child has
                             access to quality education, regardless of socio-economic background, fostering a brighter
                             future for them.</p> <br>
-                            <a href="studentsinfo" class="btn btn-primary btn-sm" style="width:100%;">See more </a> 
-                        
+                        <a href="studentsinfo" class="btn btn-primary btn-sm" style="width:100%;">See more </a>
+
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="event-box">
                         <img src="public/assets/images/events/image_06.jpg" alt="">
-                        
-                       
-                        
+
+
+
                     </div>
                 </div>
 
@@ -382,16 +383,18 @@
                 @foreach ($latestNews as $news)
                     <div class="col-md-4">
                         <div class="card">
-                            <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($news->image); ?>"
-                                style="height:200px;border-rounded:50%;">
 
-                            <div class="card-body">
+
+                            <div class="card-body" >
+                                <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($news->image); ?>"
+                                    style="height:100%; "> <br><br>
                                 <h5 class="card-title">{{ $news->title }}</h5>
-                                
-                                <p>{{ \Illuminate\Support\Str::limit($news->content, 100) }} <a href="{{ $news->link }}" style="color:green;">Read More</a></p>
+
+                                <p>{{ \Illuminate\Support\Str::limit($news->content, 100) }} <a
+                                        href="{{ $news->link }}" style="color:green;">Read More</a></p>
                             </div>
 
-                            
+
                         </div>
                     </div>
                 @endforeach
