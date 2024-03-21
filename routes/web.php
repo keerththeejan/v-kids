@@ -3,6 +3,12 @@
 use App\Http\Controllers\PdfDocumentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\DonarController;
+use App\Http\Controllers\DonateController;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PackageController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,35 +29,39 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-
 require __DIR__.'/auth.php';
-Route::get('/','App\Http\Controllers\Newscontroller@showLatestNews');
-Route::get('student', 'App\Http\Controllers\studentcontroller@create');
-Route::get('donar', 'App\Http\Controllers\donarcontroller@create');
-Route::get('document', 'App\Http\Controllers\PdfDocumentController@create');
-Route::get('donars', 'App\Http\Controllers\donarcontroller@index');
-Route::get('Donate', 'App\Http\Controllers\Donatecontroller@index');
-Route::get('students', 'App\Http\Controllers\studentcontroller@index');
-Route::get('studentsinfo', 'App\Http\Controllers\welcomecontroller@index');
-Route::POST('studentcreate', 'App\Http\Controllers\studentcontroller@store');
-Route::POST('filecreate', 'App\Http\Controllers\PdfDocumentController@store');
-Route::POST('donarcreate', 'App\Http\Controllers\donarcontroller@store');
-Route::get('/donors/delete/{id}', 'App\Http\Controllers\donarcontroller@destroy');
-Route::get('/students/delete/{id}', 'App\Http\Controllers\studentcontroller@destroy');
-Route::get('supdate{id}', 'App\Http\Controllers\studentcontroller@edit');
-Route::resource('pdf-documents', 'App\Http\Controllers\PdfDocumentController@destroy'::class);
-Route::get('news', 'App\Http\Controllers\Newscontroller@create');
-Route::get('newsinfo', 'App\Http\Controllers\Newscontroller@index');
-Route::POST('newscreate', 'App\Http\Controllers\Nwwscontroller@store');
-Route::get('/news/delete/{id}', 'App\Http\Controllers\Newscontroller@destroy');
-Route::get('package', 'App\Http\Controllers\packagecontroller@create');
-Route::POST('packagecreate', 'App\Http\Controllers\packagecontroller@store');
-Route::get('/packages/delete/{id}', 'App\Http\Controllers\packagecontroller@destroy');
-Route::get('logout', 'App\Http\Controllers\Auth\RegisteredUserController@logout');
-Route::get('/get-student-documents', 'App\Http\Controllers\PdfDocumentController@getStudentDocuments');
-Route::get('student-documents{id}', 'App\Http\Controllers\PdfDocumentController@index');
-Route::post('/download-selected-documents', [PdfDocumentController::class, 'downloadSelectedDocuments'])->name('downloadSelectedDocuments');
 
+Route::get('news', [NewsController::class, 'create']);
+Route::get('newsinfo', [NewsController::class, 'index']);
+Route::post('newscreate', [NewsController::class, 'store']);
+Route::get('news/delete/{id}', [NewsController::class, 'destroy']);
 
+Route::get('student', [StudentController::class, 'create']);
+Route::get('students', [StudentController::class, 'index']);
+Route::post('studentcreate', [StudentController::class, 'store']);
+Route::get('students/delete/{id}', [StudentController::class, 'destroy']);
+Route::get('supdate/{id}', [StudentController::class, 'edit']);
 
+Route::get('donar', [DonarController::class, 'create']);
+Route::get('donars', [DonarController::class, 'index']);
+Route::post('donarcreate', [DonarController::class, 'store']);
+Route::get('donors/delete/{id}', [DonarController::class, 'destroy']);
 
+Route::get('Donate', [DonateController::class, 'index']);
+
+Route::get('studentsinfo', [WelcomeController::class, 'index']);
+
+Route::get('package', [PackageController::class, 'create']);
+Route::post('packagecreate', [PackageController::class, 'store']);
+Route::get('packages/delete/{id}', [PackageController::class, 'destroy']);
+
+Route::resource('pdf-documents', PdfDocumentController::class)->only([
+    'destroy'
+]);
+
+Route::get('get-student-documents', [PdfDocumentController::class, 'getStudentDocuments']);
+Route::get('student-documents/{id}', [PdfDocumentController::class, 'index']);
+Route::post('download-selected-documents', [PdfDocumentController::class, 'downloadSelectedDocuments'])
+    ->name('downloadSelectedDocuments');
+
+Route::get('logout', [RegisteredUserController::class, 'logout']);
