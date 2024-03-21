@@ -34,11 +34,12 @@ Route::get('newsinfo', [NewsController::class, 'index']);
 Route::post('newscreate', [NewsController::class, 'store']);
 Route::get('news/delete/{id}', [NewsController::class, 'destroy']);
 
-Route::get('student', [StudentController::class, 'create']);
-Route::get('students', [StudentController::class, 'index']);
-Route::post('studentcreate', [StudentController::class, 'store']);
-Route::get('students/delete/{id}', [StudentController::class, 'destroy']);
-Route::get('supdate/{id}', [StudentController::class, 'edit']);
+Route::get('student', 'App\Http\Controllers\studentcontroller@create');
+Route::get('students', 'App\Http\Controllers\studentcontroller@index');
+Route::POST('studentcreate', 'App\Http\Controllers\studentcontroller@store');
+Route::get('/students/delete/{id}', 'App\Http\Controllers\studentcontroller@destroy');
+Route::get('supdate{id}', 'App\Http\Controllers\studentcontroller@edit');
+
 
 Route::get('donar', [DonarController::class, 'create']);
 Route::get('donars', [DonarController::class, 'index']);
