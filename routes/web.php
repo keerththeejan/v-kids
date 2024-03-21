@@ -40,10 +40,10 @@ Route::get('/donors/delete/{id}', 'App\Http\Controllers\donarcontroller@destroy'
 Route::get('/students/delete/{id}', 'App\Http\Controllers\studentcontroller@destroy');
 Route::get('supdate{id}', 'App\Http\Controllers\studentcontroller@edit');
 Route::resource('pdf-documents', 'App\Http\Controllers\PdfDocumentController@destroy'::class);
-Route::get('news', 'App\Http\Controllers\newscontroller@create');
-Route::get('newsinfo', 'App\Http\Controllers\newscontroller@index');
-Route::POST('newscreate', 'App\Http\Controllers\newscontroller@store');
-Route::get('/news/delete/{id}', 'App\Http\Controllers\newscontroller@destroy');
+Route::get('news', 'App\Http\Controllers\Newscontroller@create');
+Route::get('newsinfo', 'App\Http\Controllers\Newscontroller@index');
+Route::POST('newscreate', 'App\Http\Controllers\Nwwscontroller@store');
+Route::get('/news/delete/{id}', 'App\Http\Controllers\Newscontroller@destroy');
 Route::get('package', 'App\Http\Controllers\packagecontroller@create');
 Route::POST('packagecreate', 'App\Http\Controllers\packagecontroller@store');
 Route::get('/packages/delete/{id}', 'App\Http\Controllers\packagecontroller@destroy');
