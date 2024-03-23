@@ -14,6 +14,40 @@
     <link rel="stylesheet" href="public/assets/plugins/slider/css/owl.carousel.min.css">
     <link rel="stylesheet" href="public/assets/plugins/slider/css/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="public/assets/css/style.css" />
+    <style>
+        /* styles.css */
+
+        
+
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            height:30px;
+            
+            animation: marquee-animation 20s linear infinite;
+        }
+
+        .marquee-content span {
+            padding-right: 20px;
+            padding:top:40%;
+            /* Adjust spacing between names */
+        }
+
+        @keyframes marquee-animation {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -57,8 +91,8 @@
                     <div class="col-lg-3 d-none d-md-block col-md-6 btn-bhed">
                         <a href="login" class="btn btn-sm btn-success">Login</a>
                         <a href="Donate" class="btn btn-sm btn-default">
-                                    Donate
-                                </a>
+                            Donate
+                        </a>
                     </div>
                 </div>
             </div>
@@ -106,7 +140,16 @@
         </div>
     </header>
 
-
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <!-- Recent donors' names will be dynamically added here -->
+            <span><b>Recent Donars - </b></span>
+            <span>John Doe</span>|
+            <span>Jane Smith</span>|
+            <span>Michael Johnson</span>
+          
+        </div>
+    </div>
     <!-- ******************** Slider Starts Here ******************* -->
     <div class="slider">
         <!-- Set up your HTML -->
@@ -230,7 +273,8 @@
                 </div>
                 <div class="col-md-8 mv-det">
                     <h1>Our Vision</h1>
-                    <p>To establish VUnited Care For Kids Inc (VanniShangam Vcarekids) as the premier organization creating
+                    <p>To establish VUnited Care For Kids Inc (VanniShangam Vcarekids) as the premier organization
+                        creating
                         communities with high living standards by nurturing an education culture and
                         self-reliant economy.
                     </p>
@@ -257,7 +301,7 @@
                             children's learning and development. These organizations aim to ensure that every child has
                             access to quality education, regardless of socio-economic background, fostering a brighter
                             future for them.</p> <br>
-                        
+
 
                     </div>
                 </div>
@@ -297,7 +341,7 @@
                         <h3>52+</h3>
                         <span>EVENTS</span>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -371,7 +415,7 @@
                         <div class="card">
 
 
-                            <div class="card-body" >
+                            <div class="card-body">
                                 <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($news->image); ?>"
                                     style="height:100%; "> <br><br>
                                 <h5 class="card-title">{{ $news->title }}</h5>
