@@ -257,7 +257,7 @@
                             children's learning and development. These organizations aim to ensure that every child has
                             access to quality education, regardless of socio-economic background, fostering a brighter
                             future for them.</p> <br>
-                        <a href="studentsinfo" class="btn btn-primary btn-sm" style="width:100%;">See more </a>
+                        
 
                     </div>
                 </div>
