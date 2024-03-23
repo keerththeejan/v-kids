@@ -56,7 +56,9 @@
                     </div>
                     <div class="col-lg-3 d-none d-md-block col-md-6 btn-bhed">
                         <a href="login" class="btn btn-sm btn-success">Login</a>
-                        <button class="btn btn-sm btn-default">Donate</button>
+                        <a href="Donate" class="btn btn-sm btn-default">
+                                    Donate
+                                </a>
                     </div>
                 </div>
             </div>
@@ -67,7 +69,7 @@
                     <div class="col-lg-4 col-md-12 logo">
                         <a href="/">
                             <img src="public/assets/images/logo.jpg" alt="" width="20%"><span
-                                style="padding-left: 10px; font-size: 20px;"> <b>Vanni Changam</b> </span>
+                                style="padding-left: 10px; font-size: 20px;"> <b>VanniShangam Vcarekids</b> </span>
                             <a data-toggle="collapse" data-target="#menu" href="#menu"><i
                                     class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
                         </a>
@@ -84,26 +86,20 @@
                                 <a class="nav-link" href="#about">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="services.html">Services</a>
+                                <a class="nav-link" href="">Services</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="gallery.html">Gallery</a>
+                                <a class="nav-link" href="">Gallery</a>
                             </li>
 
                             <!-- <li class="nav-item">
-                                <a class="nav-link" href="blog.html">Blog</a>
+                                <a class="nav-link" href="">Blog</a>
                             </li> -->
                             <li class="nav-item">
-                                <a class="nav-link" href="contact_us.html">Contact US</a>
+                                <a class="nav-link" href="">Contact US</a>
                             </li>
-
-
-
-
                         </ul>
-
-
                     </div>
                 </div>
             </div>
@@ -189,8 +185,6 @@
                 </div>
                 <div class="image-part col-md-12">
                     <div class="about-quick-box row">
-
-
                         <div class="col-md-6">
                             <div class="about-qcard ">
                                 <i class="fas fa-donate yell"></i>
@@ -236,7 +230,7 @@
                 </div>
                 <div class="col-md-8 mv-det">
                     <h1>Our Vision</h1>
-                    <p>To establish VUnited Care For Kids Inc (Vanni Sangam) as the premier organization creating
+                    <p>To establish VUnited Care For Kids Inc (VanniShangam Vcarekids) as the premier organization creating
                         communities with high living standards by nurturing an education culture and
                         self-reliant economy.
                     </p>
@@ -269,10 +263,7 @@
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="event-box">
-                        <img src="public/assets/images/events/image_06.jpg" alt="">
-
-
-
+                        <img src="public/assets/images/vanni.jpg" alt="" width="70%">
                     </div>
                 </div>
 
@@ -291,27 +282,22 @@
             <div class="container">
                 <div class="row session-title">
                     <h2>Our Achievemtns in Numbers</h2>
-                    <p>We can talk for a long time about advantages of our Dental clinic before other medical treatment
-                        facilities.
-                        But you can read the following facts in order to make sure of all pluses of our clinic:</p>
+                    <p></p>
                 </div>
                 <div class="row">
-                    <div class="col-sm-3 numb">
+                    <div class="col-sm-4 numb">
                         <h3>12+</h3>
                         <span>YEARS OF EXPEREANCE</span>
                     </div>
-                    <div class="col-sm-3 numb">
+                    <div class="col-sm-4 numb">
                         <h3>1812+</h3>
                         <span>HAPPY CHILDRENS</span>
                     </div>
-                    <div class="col-sm-3 numb">
+                    <div class="col-sm-4 numb">
                         <h3>52+</h3>
                         <span>EVENTS</span>
                     </div>
-                    <div class="col-sm-3 numb">
-                        <h3>48+</h3>
-                        <span>FUNT RAISED</span>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -455,7 +441,7 @@
 
 
                 </div>
-                <div class="donate-link col-md-3"><a href="donate.html" class="btn btn-primary "><span
+                <div class="donate-link col-md-3"><a href="Donate" class="btn btn-primary "><span
                             class="btn-title">Donate Now</span></a></div>
             </div>
 
