@@ -70,9 +70,6 @@
                     </div>
                     <div id="menu" class="col-lg-8 col-md-12 d-none d-lg-block nav-col">
 
-
-
-
                     </div>
                 </div>
             </div>
@@ -92,16 +89,12 @@
                                         style="height:100%">
                                 </div>
                                 <div class="card-footer">
-                                    <button class="btn btn-primary" data-toggle="modal"
-                                        data-target="#donateModal{{ $student->id }}">
-                                        Donate
-                                    </button>
+                                    <a href="" class="btn btn-sm btn-primary" style="width: 100%;">Donate</a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Donate Modal -->
-
                           @include('donatestatus')
                     @endforeach
                 </div>

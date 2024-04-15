@@ -17,7 +17,7 @@
     <style>
         /* styles.css */
 
-        
+
 
         .marquee-container {
             width: 100%;
@@ -27,14 +27,14 @@
         .marquee-content {
             display: inline-block;
             white-space: nowrap;
-            height:30px;
-            
+            height: 30px;
+
             animation: marquee-animation 20s linear infinite;
         }
 
         .marquee-content span {
             padding-right: 20px;
-            padding:top:40%;
+            padding-top: 40%;
             /* Adjust spacing between names */
         }
 
@@ -74,8 +74,7 @@
                         <ul class="ulright">
                             <li> <small>Follow Us </small>:</li>
                             <li>
-                                <a href="https://www.facebook.com/vcarekids"> <i
-                                        class="fab fa-facebook-square"></i></i></a>
+                                <a href="https://www.facebook.com/vcarekids"> <i class="fab fa-facebook-square"></i></i></a>
                             </li>
                             <li>
                                 <i class="fab fa-twitter-square"></i>
@@ -102,10 +101,8 @@
                 <div class="row nav-row">
                     <div class="col-lg-4 col-md-12 logo">
                         <a href="/">
-                            <img src="public/assets/images/logo.jpg" alt="" width="20%"><span
-                                style="padding-left: 10px; font-size: 20px;"> <b>VanniShangam Vcarekids</b> </span>
-                            <a data-toggle="collapse" data-target="#menu" href="#menu"><i
-                                    class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
+                            <img src="public/assets/images/logo.jpg" alt="" width="20%"><span style="padding-left: 10px; font-size: 20px;"> <b>VanniShangam Vcarekids</b> </span>
+                            <a data-toggle="collapse" data-target="#menu" href="#menu"><i class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
                         </a>
 
                     </div>
@@ -147,7 +144,7 @@
             <span>John Doe</span>|
             <span>Jane Smith</span>|
             <span>Michael Johnson</span>
-          
+
         </div>
     </div>
     <!-- ******************** Slider Starts Here ******************* -->
@@ -156,8 +153,7 @@
         <div class="owl-carousel ">
             <div class="slider-img">
                 <div class="item">
-                    <div class="slider-img"><img src="public/assets/images/slider/sli1.jpg" alt=""
-                            style="height:100%;"></div>
+                    <div class="slider-img"><img src="public/assets/images/slider/sli1.jpg" alt="" style="height:100%;"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
@@ -173,8 +169,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="slider-img"><img src="public/assets/images/slider/sli2.jpg" alt=""
-                        style="height:100%;">
+                <div class="slider-img"><img src="public/assets/images/slider/sli2.jpg" alt="" style="height:100%;">
                 </div>
                 <div class="container">
                     <div class="row">
@@ -189,8 +184,7 @@
                 </div>
             </div>
             <div class="item">
-                <div class="slider-img"><img src="public/assets/images/slider/sli1.jpg" alt=""
-                        style="height:100%;"></div>
+                <div class="slider-img"><img src="public/assets/images/slider/sli1.jpg" alt="" style="height:100%;"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
@@ -301,7 +295,7 @@
                             children's learning and development. These organizations aim to ensure that every child has
                             access to quality education, regardless of socio-economic background, fostering a brighter
                             future for them.</p> <br>
-
+                        <a href="studentsinfo" class="btn btn-sm btn-success" style="width: 100%;">see more</a>
 
                     </div>
                 </div>
@@ -411,22 +405,20 @@
             </div>
             <div class="blog-row row">
                 @foreach ($latestNews as $news)
-                    <div class="col-md-4">
-                        <div class="card">
+                <div class="col-md-4">
+                    <div class="card">
 
 
-                            <div class="card-body">
-                                <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($news->image); ?>"
-                                    style="height:100%; "> <br><br>
-                                <h5 class="card-title">{{ $news->title }}</h5>
+                        <div class="card-body">
+                            <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($news->image); ?>" style="height:100%; "> <br><br>
+                            <h5 class="card-title">{{ $news->title }}</h5>
 
-                                <p>{{ \Illuminate\Support\Str::limit($news->content, 100) }} <a
-                                        href="{{ $news->link }}" style="color:green;">Read More</a></p>
-                            </div>
-
-
+                            <p>{{ \Illuminate\Support\Str::limit($news->content, 100) }} <a href="{{ $news->link }}" style="color:green;">Read More</a></p>
                         </div>
+
+
                     </div>
+                </div>
                 @endforeach
             </div>
         </div>
@@ -485,8 +477,7 @@
 
 
                 </div>
-                <div class="donate-link col-md-3"><a href="Donate" class="btn btn-primary "><span
-                            class="btn-title">Donate Now</span></a></div>
+                <div class="donate-link col-md-3"><a href="Donate" class="btn btn-primary "><span class="btn-title">Donate Now</span></a></div>
             </div>
 
         </div>
