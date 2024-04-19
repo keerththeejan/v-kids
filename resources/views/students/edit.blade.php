@@ -11,8 +11,6 @@
             <div class="navbar-bg"></div>
             @include('top-nov')
             @include('sidenav')
-
-
             <div class="section-body">
                 <!-- add content here -->
                 <div class="main-content">
@@ -27,8 +25,7 @@
                                 <div class="card-header">
                                     <h2>Edit Student</h2>
                                 </div>
-                                <form class="needs-validation" novalidate="" method="post" action=""
-                                    enctype="multipart/form-data">
+                                <form class="needs-validation" novalidate="" method="post" action="" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="card-body">
@@ -38,16 +35,14 @@
 
                                         <div class="form-group">
                                             <label>Student Full Name</label>
-                                            <input type="text" name="fullname" class="form-control" required=""
-                                                value="{{ $student->fullname }}">
+                                            <input type="text" name="fullname" class="form-control" required="" value="{{ $student->fullname }}">
                                             <div class="invalid-feedback">
                                                 What's Student Full Name?
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label>Father or Mother Full Name</label>
-                                            <input type="text" name="parentname" value="{{ $student->id }}"
-                                                class="form-control" required="">
+                                            <input type="text" name="parentname" value="{{ $student->parentname }}" class="form-control" required="">
                                             <div class="invalid-feedback">
                                                 What's Father or Mother Full Name?
                                             </div>
@@ -55,7 +50,7 @@
 
                                         <div class="form-group mb-0">
                                             <label>Parents Permanent Address</label>
-                                            <textarea class="form-control" name="parentaddress" required="">{{ $student->id }}</textarea>
+                                            <textarea class="form-control" name="parentaddress" required="">{{ $student->parentaddress }}</textarea>
                                             <div class="invalid-feedback">
                                                 What's Parents Permanent Address?
                                             </div>
@@ -63,7 +58,7 @@
 
                                         <div class="form-group mb-0">
                                             <label>Student Present Address</label>
-                                            <textarea class="form-control" name="studentaddress" required="">{{ $student->id }}</textarea>
+                                            <textarea class="form-control" name="studentaddress" required="">{{ $student->permanentaddress }}</textarea>
                                             <div class="invalid-feedback">
                                                 What's Student Present Address?
                                             </div>
@@ -71,8 +66,7 @@
 
                                         <div class="form-group">
                                             <label>Date of Birth</label>
-                                            <input type="date" name="dob" value="{{ $student->id }}"
-                                                class="form-control" required="">
+                                            <input type="date" name="dob" value="{{ $student->dob }}" class="form-control" required="">
                                             <div class="invalid-feedback">
                                                 What's your date of birth?
                                             </div>
@@ -80,9 +74,8 @@
 
                                         <div class="form-group">
                                             <label>District</label>
-                                            <select name="district" class="form-control" required="" id="filter"
-                                                onchange="filterList()">
-                                                <option value="" selected disabled>Select District</option>
+                                            <select name="district" class="form-control" required="" id="filter" onchange="filterList()">
+                                                <option value="{{ $student->district }}" selected>{{ $student->district }}</option>
                                                 <option value="colombo">Colombo</option>
                                                 <option value="gampaha">Gampaha</option>
                                                 <option value="kalutara">Kalutara</option>

@@ -55,10 +55,12 @@ Route::get('/packages/delete/{id}', 'App\Http\Controllers\packagecontroller@dest
 
 Route::get('/get-student-documents', 'App\Http\Controllers\PdfDocumentController@getStudentDocuments');
 Route::get('student-documents{id}', 'App\Http\Controllers\PdfDocumentController@index');
-Route::post('/download-selected-documents', [PdfDocumentController::class, 'downloadSelectedDocuments'])->name('downloadSelectedDocuments');
+Route::post('/downloadSelectedDocuments', [PdfDocumentController::class, 'downloadSelectedDocuments'])->name('downloadSelectedDocuments');
 Route::resource('pdf-documents', 'App\Http\Controllers\PdfDocumentController@destroy'::class);
 Route::POST('filecreate', 'App\Http\Controllers\PdfDocumentController@store');
 Route::get('document', 'App\Http\Controllers\PdfDocumentController@create');
 
 Route::get('logout', 'App\Http\Controllers\Auth\RegisteredUserController@logout');
 
+Route::POST('/download.pdf', 'App\Http\Controllers\DownloadController@downloadPDF');
+Route::post('/download-zip', 'DownloadController@downloadZip')->name('download.zip');

@@ -218,9 +218,14 @@
                         purposes and
                         activities, we embark on a mission to transform lives and shape a brighter future for
                         generations to come.
+                        Religions, castes, gender discrimination, and socioeconomic status are all beneath the Kingdom of God.
+                        It accepts all people and changes their lives by implementing the moral and skill standards that the benevolent God created. ​
+
+
                     </p>
                 </div>
                 <div class="image-part col-md-12">
+
                     <div class="about-quick-box row">
                         <div class="col-md-6">
                             <div class="about-qcard ">
@@ -251,26 +256,26 @@
 
     <section class="container-fluid mission-vision">
         <div class="container">
+
             <div class="row mission">
-                <div class="col-md-8 mv-det">
+                <div class="col-md-9 mv-det">
                     <h1>Our Mission</h1>
-                    <p>To create a socially and economically strong new society through education
+                    <p style="text-align: justify;">Our goal is to foster a socially and economically robust society by prioritizing education as the cornerstone of empowerment. Through accessible and inclusive educational initiatives, we aim to equip individuals with the knowledge, skills, and opportunities needed to build a prosperous and equitable future for our community
                     </p>
                 </div>
-                <div class="col-md-4 mv-img">
+                <div class="col-md-3 mv-img">
                     <img src="public/assets/images/events/child2.jpg" alt="">
                 </div>
             </div>
             <div class="row vision">
-                <div class="col-md-4 mv-img">
+                <div class="col-md-3 mv-img">
                     <img src="public/assets/images/events/child3.jpg" alt="">
                 </div>
-                <div class="col-md-8 mv-det">
+                <div class="col-md-9 mv-det">
                     <h1>Our Vision</h1>
-                    <p>To establish VUnited Care For Kids Inc (VanniShangam Vcarekids) as the premier organization
-                        creating
-                        communities with high living standards by nurturing an education culture and
-                        self-reliant economy.
+                    <p>VUnited Care For Kids Inc (VanniShangam Vcarekids) is dedicated to becoming the foremost
+                        organization in fostering communities with elevated living standards through the cultivation
+                        of an education-centric ethos and fostering a self-sustaining economy. We envision a future where every individual is empowered through education, leading to self-reliance and collective prosperity. By championing educational initiatives and sustainable economic practices, we strive to create vibrant communities where every member has the opportunity to thrive, thereby contributing to a brighter and more equitable society for generations to come.
                     </p>
                 </div>
             </div>
@@ -342,57 +347,6 @@
         </div>
 
     </div>
-
-    <!--################### Our Team Starts Here #######################--->
-    <!-- <section class="our-team team-11">
-        <div class="container">
-            <div class="session-title row">
-                <h2>Meet our Team</h2>
-                <p></p>
-            </div>
-            <div class="row team-row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-usr">
-                        <img src="public/assets/images/team/team-memb1.jpg" alt="">
-                        <div class="det-o">
-                            <h4>David Kanuel</h4>
-                            <i>CEO </i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-usr">
-                        <img src="public/assets/images/team/team-memb2.jpg" alt="">
-                        <div class="det-o">
-                            <h4>David Kanuel</h4>
-                            <i>CFO</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-usr">
-                        <img src="public/assets/images/team/team-memb3.jpg" alt="">
-                        <div class="det-o">
-                            <h4>David Kanuel</h4>
-                            <i>Team Leader</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="single-usr">
-                        <img src="public/assets/images/team/team-memb4.jpg" alt="">
-                        <div class="det-o">
-                            <h4>David Kanuel</h4>
-                            <i>Project Manager</i>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section> -->
-
 
 
     <!-- ################# Our Blog Starts Here#######################--->
