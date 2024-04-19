@@ -64,3 +64,10 @@ Route::get('logout', 'App\Http\Controllers\Auth\RegisteredUserController@logout'
 
 Route::POST('/download.pdf', 'App\Http\Controllers\DownloadController@downloadPDF');
 Route::post('/download-zip', 'DownloadController@downloadZip')->name('download.zip');
+Route::get('/contact', 'App\Http\Controllers\ContactController@showForm');
+Route::get('/activity', 'App\Http\Controllers\NewsController@index');
+Route::POST('/contactstore', 'App\Http\Controllers\ContactController@store');
+Route::get('/contacts', 'App\Http\Controllers\ContactController@showForm');
+Route::get('/contacts/{id}','App\Http\Controllers\ContactController@showForm');
+Route::put('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
+Route::delete('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');

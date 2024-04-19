@@ -68,9 +68,9 @@
 
     @include('fooder')
 
-    <script src="adminpanel/js/app.min.js"></script>
-    <script src="adminpanel/js/scripts.js"></script>
-    <script src="adminpanel/js/custom.js"></script>
+    <script src="public/adminpanel/js/app.min.js"></script>
+    <script src="public/adminpanel/js/scripts.js"></script>
+    <script src="public/adminpanel/js/custom.js"></script>
 
     <script>
         function confirmDelete(donorId) {

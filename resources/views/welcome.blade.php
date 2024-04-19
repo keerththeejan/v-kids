@@ -117,18 +117,18 @@
                                 <a class="nav-link" href="#about">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">Services</a>
+                                <a class="nav-link" href="">Activity</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="">Gallery</a>
+                                <a class="nav-link" href="">Events</a>
                             </li>
 
                             <!-- <li class="nav-item">
                                 <a class="nav-link" href="">Blog</a>
                             </li> -->
                             <li class="nav-item">
-                                <a class="nav-link" href="">Contact US</a>
+                                <a class="nav-link" href="contact">Contact US</a>
                             </li>
                         </ul>
                     </div>
