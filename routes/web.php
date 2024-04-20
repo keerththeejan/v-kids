@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PdfDocumentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\packageController;
+use App\Http\Controllers\welcomeController;
 
 Route::get('/', [NewsController::class, 'showLatestNews']);
 
@@ -16,6 +19,8 @@ Route::get('news', [NewsController::class, 'create']);
 Route::get('newsinfo', [NewsController::class, 'index']);
 Route::post('newscreate', [NewsController::class, 'store']);
 Route::get('news/delete/{id}', [NewsController::class, 'destroy']);
+
+Route::get('/contact', [ContactController::class, 'showForm']);
 
 Route::get('student', 'App\Http\Controllers\studentcontroller@create');
 Route::get('students', 'App\Http\Controllers\studentcontroller@index');
@@ -31,10 +36,9 @@ Route::POST('donarcreate', 'App\Http\Controllers\donarcontroller@store');
 Route::get('/donors/delete/{id}', 'App\Http\Controllers\donarcontroller@destroy');
 Route::get('Donate', 'App\Http\Controllers\Donatecontroller@index');
 
-
-Route::get('studentsinfo', 'App\Http\Controllers\welcomecontroller@index');
-Route::get('package', 'App\Http\Controllers\packagecontroller@create');
-Route::POST('packagecreate', 'App\Http\Controllers\packagecontroller@store');
+Route::get('/studentsinfo', [welcomeController::class, 'index']);
+Route::get('/package', [packageController::class, 'create']);
+Route::POST('/packagecreate', [packageController::class, 'store']);
 Route::get('/packages/delete/{id}', 'App\Http\Controllers\packagecontroller@destroy');
 
 Route::get('/get-student-documents', 'App\Http\Controllers\PdfDocumentController@getStudentDocuments');
@@ -48,7 +52,6 @@ Route::get('logout', 'App\Http\Controllers\Auth\RegisteredUserController@logout'
 
 Route::POST('/download.pdf', 'App\Http\Controllers\DownloadController@downloadPDF');
 Route::post('/download-zip', 'DownloadController@downloadZip')->name('download.zip');
-Route::get('/contact', 'App\Http\Controllers\ContactController@showForm');
 Route::get('/activity', 'App\Http\Controllers\NewsController@index');
 Route::POST('/contactstore', 'App\Http\Controllers\contactController@save');
 Route::get('/contacts', 'App\Http\Controllers\ContactController@showForm');
