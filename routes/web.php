@@ -60,4 +60,4 @@ Route::put('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
 Route::delete('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
 
 Route::get('event', 'App\Http\Controllers\eventcontroller@create');
-Route::get('studmsg{id}', 'App\Http\Controllers\ContactController@showstudent');
+Route::get('studmsg{id}', [ContactController::class, 'showstudent']);
