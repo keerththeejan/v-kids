@@ -79,12 +79,19 @@
 
             <div class="card mt-4">
                 <div class="card-body">
-                    <h2>Student Help Contact us</h2> <hr>
-                    <form action="" method="POST">
-                    @csrf
+                    @if (session()->has('message'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong> {{ session('message') }}</strong>
+                        <meta http-equiv='refresh' content='2'>
+                    </div>
+                    @endif
+                    <h2>Student Help Contact us</h2>
+                    <hr>
+                    <form action="smsg" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label for="name">Student ID</label>
-                            <input type="text" id="sname" name="sname" class="form-control" value="{{ $student->id }}" required>
+                            <input type="text" id="sname" name="sid" class="form-control" value="{{ $student->id }}" required>
                         </div>
                         <div class="form-group">
                             <label for="name">Student Name:</label>

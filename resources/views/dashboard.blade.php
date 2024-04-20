@@ -31,7 +31,7 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                                     <div class="banner-img">
-                                                        <h1>10</h1>
+                                                        <h1>{{ $studentCount }}</h1>
                                                     </div>
                                                 </div>
                                             </div>
@@ -58,7 +58,7 @@
 
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                                     <div class="banner-img">
-                                                        <h1>03</h1>
+                                                        <h1>{{ $donarCount }}</h1>
                                                     </div>
                                                 </div>
 
@@ -86,7 +86,7 @@
 
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                                     <div class="banner-img">
-                                                        <h1>03</h1>
+                                                        <h1>1</h1>
                                                     </div>
                                                 </div>
 
@@ -114,7 +114,7 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                                     <div class="banner-img">
-                                                        <h1>05</h1>
+                                                        <h1>{{ $newscount }}</h1>
                                                     </div>
                                                 </div>
                                             </div>
@@ -156,6 +156,24 @@
                                     <div class="card-body">
                                         <div class="table-responsive">
                                             <table class="table table-hover mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>name</th>
+                                                        <th>Date</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                   
+                                                @foreach ($messages as $message)
+                                                <tr>
+                                                        <td>{{ $message->name }}</th>
+                                                        <th>{{ $message->created_at }}</th>
+                                                        <th><a href="msg{{ $message->id }}">See Msg</a></th>
+                                                    </tr>
+                                                @endforeach
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>

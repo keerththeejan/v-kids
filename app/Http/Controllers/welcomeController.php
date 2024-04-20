@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Donar;
+use App\Models\Message;
+use App\Models\News;
 use Illuminate\Http\Request;
 use App\Models\Student;
 
@@ -18,6 +21,18 @@ class welcomeController extends Controller
         return view('child', compact('students'));
     }
 
+    public function dashboard()
+    {
+        $studentCount = Student::count();
+        $donarCount = Donar::count();
+        $newscount=News::count();
+        $messages=Message::all();
+        return view('dashboard', compact('studentCount', 'donarCount','newscount','messages'));
+
+    }
+
+
+    
     /**
      * Show the form for creating a new resource.
      *

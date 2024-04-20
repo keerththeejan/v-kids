@@ -28,6 +28,11 @@ class donarcontroller extends Controller
         return view('donars.create');
     }
 
+    public function createdonation()
+    {
+        return view('donars.donation');
+    }
+
     /**
      * Store a newly created resource in storage.
      *

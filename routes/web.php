@@ -8,15 +8,15 @@ use App\Http\Controllers\packageController;
 use App\Http\Controllers\welcomeController;
 
 Route::get('/', [NewsController::class, 'showLatestNews']);
+Route::get('/dashboard', [welcomeController::class, 'dashboard']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
 Route::get('news', [NewsController::class, 'create']);
 Route::get('newsinfo', [NewsController::class, 'index']);
+Route::get('newses', [NewsController::class, 'index1']);
+
 Route::post('newscreate', [NewsController::class, 'store']);
 Route::get('news/delete/{id}', [NewsController::class, 'destroy']);
 
@@ -31,6 +31,8 @@ Route::get('supdate{id}', 'App\Http\Controllers\studentcontroller@edit');
 
 
 Route::get('donar', 'App\Http\Controllers\donarcontroller@create');
+Route::get('donation', 'App\Http\Controllers\donarcontroller@createdonation');
+
 Route::get('donars', 'App\Http\Controllers\donarcontroller@index');
 Route::POST('donarcreate', 'App\Http\Controllers\donarcontroller@store');
 Route::get('/donors/delete/{id}', 'App\Http\Controllers\donarcontroller@destroy');
@@ -54,6 +56,7 @@ Route::POST('/download.pdf', 'App\Http\Controllers\DownloadController@downloadPD
 Route::post('/download-zip', 'DownloadController@downloadZip')->name('download.zip');
 Route::get('/activity', 'App\Http\Controllers\NewsController@index');
 Route::POST('/contactstore', 'App\Http\Controllers\contactController@save');
+Route::POST('/smsg', 'App\Http\Controllers\contactController@smsgsave');
 Route::get('/contacts', 'App\Http\Controllers\ContactController@showForm');
 Route::get('/contacts/{id}','App\Http\Controllers\ContactController@showForm');
 Route::put('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');

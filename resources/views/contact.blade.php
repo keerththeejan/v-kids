@@ -79,8 +79,15 @@
 
             <div class="card mt-4">
                 <div class="card-body">
+                    @if (session()->has('message'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong> {{ session('message') }}</strong>
+                        <meta http-equiv='refresh' content='2'>
+                    </div>
+                    @endif
                     <h2>Contact Us</h2>
                     <form action="contactstore" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label for="name">Your Name:</label>
                             <input type="text" id="name" name="name" class="form-control" required>

@@ -24,6 +24,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="donar">Add New</a></li>
                     <li><a class="nav-link" href="donars">Info</a></li>
+                    <li><a class="nav-link" href="donation">Donation</a></li>
                 </ul>
             </li>
 
@@ -31,7 +32,7 @@
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="file-text"></i><span>News</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="news">Add New</a></li>
-                    <li><a class="nav-link" href="newsinfo">Info</a></li>
+                    <li><a class="nav-link" href="newses">Info</a></li>
                 </ul>
             </li>
 

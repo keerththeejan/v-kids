@@ -227,7 +227,7 @@
                 <div class="image-part col-md-12">
 
                     <div class="about-quick-box row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="about-qcard ">
                                 <i class="fas fa-donate yell"></i>
                                 <a href="Donate">
@@ -236,14 +236,7 @@
 
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="about-qcard ">
-                                <i class="fas fa-hands-helping blu"></i>
-                                <a href="Volunteer">
-                                    <p>Help Someone</p>
-                                </a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
