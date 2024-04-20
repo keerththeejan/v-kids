@@ -19,18 +19,19 @@
                         <div class="col-12 col-md-12 col-lg-12">
                             <br>
                             <div class="card-body">
+
+
                                 <div class="card-header">
+                                    <h3>New Students</h3>
+                                </div>
+                                <br>
+                                <div class="card-header-action">
                                     <a href="students" class="btn btn-primary">
                                         <i class="fas fa-user-info"></i> View Students
                                     </a>
                                 </div>
-                                <div class="card-header">
-                                    <h3>New Students</h3>
-                                </div>
 
-
-                                <form class="needs-validation" novalidate="" method="post" action="studentcreate"
-                                    enctype="multipart/form-data">
+                                <form class="needs-validation" novalidate="" method="post" action="studentcreate" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="card-body">
@@ -76,8 +77,7 @@
 
                                         <div class="form-group">
                                             <label>District</label>
-                                            <select name="district" class="form-control" required="" id="filter"
-                                                onchange="filterList()">
+                                            <select name="district" class="form-control" required="" id="filter" onchange="filterList()">
                                                 <option value="" selected disabled>Select District</option>
                                                 <option value="colombo">Colombo</option>
                                                 <option value="gampaha">Gampaha</option>

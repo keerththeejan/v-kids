@@ -20,9 +20,7 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
-        
-
-       
+         
     }
 
     public function save(Request $request)
@@ -58,8 +56,8 @@ class ContactController extends Controller
 
     public function edit($id)
     {
-        $contact = Message::find($id);
-        return view('edit_contact', ['contact' => $contact]);
+        $student = Message::find($id);
+        return view('msgshow', compact('student'));
     }
 
     public function update(Request $request, $id)

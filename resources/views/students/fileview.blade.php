@@ -15,39 +15,84 @@
             <div class="section-body">
                 <div class="main-content">
                     <section class="section">
-                        <table class="table table-striped" id="table-1">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Full Name</th>
-                                    <th></th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                <form action="download.pdf" method="POST">
+                        <div class="row">
+                            <div class="col-6 col-md-6 col-lg-6">
+                                <form class="needs-validation" novalidate="" method="post" action="filecreate" enctype="multipart/form-data">
                                     @csrf
-                                    @foreach ($documents as $document)
-                                    <tr>
-                                        <td>{{ $document->title }}</td>
-                                        <td>{{ $document->name }}</td>
+                                    <div class="card-header">
+                                        <h2>Student Files</h2>
+                                    </div>
+                                    <div class="card-body">
 
-                                        <td><a href="storage/app/public/pdf/{{ $document->title }}.pdf">
-                                                Download
-                                            </a></td>
-                                        <td>
-                                            <div class="btn-group mb-3 btn-group-sm" role="group" aria-label="Basic example">
-                                                <button class="btn btn-danger" onclick="confirmDelete('{{ $document->id }}')"><i class="fas fa-times"></i></button>
+
+
+                                        <div class="form-group">
+                                            <label>Document Type</label>
+
+                                            @csrf
+                                            <select name="title" class="form-control" required="">
+                                                <option value="" selected disabled>Select Document Type</option>
+                                                @foreach ($packages as $package)
+                                                <option value="{{ $package->id }}">{{ $package->name }}</option>
+                                                @endforeach
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Select Package
                                             </div>
-                                        </td>
-                                    </tr>
-                                    @endforeach
+                                        </div>
 
+
+
+                                        <div class="form-group">
+                                            <label>File</label>
+                                            <input type="file" name="pdf" class="form-control" required="">
+                                            <div class="invalid-feedback">
+                                                Choose a photo file
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-footer text-right">
+                                        <input type="submit" value="Save" name="save" class="btn btn-primary">
+                                    </div>
                                 </form>
-                            </tbody>
-                        </table>
+                            </div>
+                            <div class="col-6 col-md-6 col-lg-6">
 
+                                <table class="table table-striped" id="table-1">
+                                    <thead>
+                                        <tr>
+
+                                            <th>Full Name</th>
+                                            <th></th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <form action="download.pdf" method="POST">
+                                            @csrf
+                                            @foreach ($documents as $document)
+                                            <tr>
+
+                                                <td>{{ $document->name }}</td>
+
+                                                <td><a href="storage/app/public/pdf/{{ $document->title }}.pdf">
+                                                        Download
+                                                    </a></td>
+                                                <td>
+                                                    <div class="btn-group mb-3 btn-group-sm" role="group" aria-label="Basic example">
+                                                        <button class="btn btn-danger" onclick="confirmDelete('{{ $document->id }}')"><i class="fas fa-times"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            @endforeach
+
+                                        </form>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </div>

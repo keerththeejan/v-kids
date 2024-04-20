@@ -14,7 +14,6 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="student">Add New</a></li>
                     <li><a class="nav-link" href="students">Info</a></li>
-                    <li><a class="nav-link" href="document">Documents</a></li>
                 </ul>
             </li>
 

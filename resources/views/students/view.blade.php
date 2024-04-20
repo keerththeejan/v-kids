@@ -17,10 +17,10 @@
                 <div class="main-content">
                     <section class="section">
                         @if (session()->has('message'))
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                <strong> {{ session('message') }}</strong>
-                                <meta http-equiv='refresh' content='2'>
-                            </div>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong> {{ session('message') }}</strong>
+                            <meta http-equiv='refresh' content='2'>
+                        </div>
                         @endif
                         <div class="table-responsive">
                             <div class="card-header">
@@ -31,7 +31,8 @@
                                 </div>
 
                             </div>
-                            <table class="table table-striped" id="table-1">
+                            <table class="table table-striped" id="myTable"> <br>
+                                <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search for Student Name.." title="Type in a name"> <br>
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -43,29 +44,23 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($students as $student)
-                                        <tr>
-                                            <td style="text-transform: capitalize;">S{{ $student->id }}</td>
-                                            <td style="text-transform: capitalize;">{{ $student->fullname }}</td>
-                                            <td style="text-transform: capitalize;">{{ $student->district }}</td>
-                                            <td>
+                                    <tr>
+                                        <td style="text-transform: capitalize;">S{{ $student->id }}</td>
+                                        <td style="text-transform: capitalize;">{{ $student->fullname }}</td>
+                                        <td style="text-transform: capitalize;">{{ $student->district }}</td>
+                                        <td>
 
-                                                <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($student->image); ?>"
-                                                    style="width:10%; margin:10px;">
-                                            </td>
-                                            <td>
-                                                <div class="btn-group mb-3 btn-group-sm" role="group"
-                                                    aria-label="Basic example">
-                                                    <!-- Add Edit and Delete buttons -->
-                                                    <a href="supdate{{ $student->id }}" class="btn btn-warning"><i
-                                                            class="far fa-edit"></i></a>
-                                                    <button class="btn btn-danger"
-                                                        onclick="confirmDelete('{{ $student->id }}')"><i
-                                                            class="fas fa-times"></i></button>
-                                                    <a href="student-documents{{ $student->id }}" class="btn btn-info"><i
-                                                            class="far fa-file"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                            <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($student->image); ?>" style="width:10%; margin:10px;">
+                                        </td>
+                                        <td>
+                                            <div class="btn-group mb-3 btn-group-sm" role="group" aria-label="Basic example">
+                                                <!-- Add Edit and Delete buttons -->
+                                                <a href="supdate{{ $student->id }}" class="btn btn-warning"><i class="far fa-edit"></i></a>
+                                                <button class="btn btn-danger" onclick="confirmDelete('{{ $student->id }}')"><i class="fas fa-times"></i></button>
+                                                <a href="student-documents{{ $student->id }}" class="btn btn-info"><i class="far fa-file"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
                                     @endforeach
                                 </tbody>
                             </table>
@@ -89,6 +84,27 @@
         function confirmDelete(studentId) {
             if (confirm("Are you sure you want to delete this student?")) {
                 window.location.href = "{{ url('studentdoc/delete') }}/" + studentId;
+            }
+        }
+    </script>
+
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
             }
         }
     </script>

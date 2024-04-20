@@ -15,12 +15,12 @@ class PdfDocumentController extends Controller
 {
     public function index($id)
     {
+        $packages=package::all();
         $documents = $data = DB::table('pdf_documents')
             ->join('packages', 'pdf_documents.packageid', '=', 'packages.id')
-            ->join('students', 'pdf_documents.studentid', '=', 'students.id')
             ->where('pdf_documents.studentid', $id)
             ->get();
-        return view('students.fileview', compact('documents'));
+        return view('students.fileview', compact('documents','packages'));
     }
 
 

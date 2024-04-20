@@ -21,6 +21,8 @@ Route::post('newscreate', [NewsController::class, 'store']);
 Route::get('news/delete/{id}', [NewsController::class, 'destroy']);
 
 Route::get('/contact', [ContactController::class, 'showForm']);
+Route::get('/msg{id}', [ContactController::class, 'edit']);
+
 
 Route::get('student', 'App\Http\Controllers\studentcontroller@create');
 Route::get('students', 'App\Http\Controllers\studentcontroller@index');
