@@ -76,6 +76,10 @@
     <div class="container">
         <section class="section">
             <div class="card">
+                <div class="row session-title">
+                    <h2> Our Recent Activities </h2>
+                    <p>Take a look at what people say about US </p>
+                </div>
                 <div class="card-body">
                     <div class="blog-row row">
                         @foreach ($latestNews as $news)

@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Models\Student;
 
 class ContactController extends Controller
 {
@@ -11,21 +12,22 @@ class ContactController extends Controller
         return view('contact');
     }
 
+    public function showstudent($id)
+    {
+        $student = Student::find($id);
+        return view('contactstudent', compact('student'));
+    }
+
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'message' => 'required',
-        ]);
+        
 
-        $contact = new Contact();
-        $contact->name = $request->name;
-        $contact->email = $request->email;
-        $contact->message = $request->message;
-        $contact->save();
+       
+    }
 
-        return redirect('/contacts')->with('success', 'Contact form submitted successfully!');
+    public function save(Request $request)
+    {
+        return "sumanan"; 
     }
 
     public function index()

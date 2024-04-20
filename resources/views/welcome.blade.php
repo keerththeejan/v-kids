@@ -117,7 +117,7 @@
                                 <a class="nav-link" href="#about">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">Activity</a>
+                                <a class="nav-link" href="activity">Activity</a>
                             </li>
 
                             <li class="nav-item">
@@ -275,7 +275,7 @@
                     <h1>Our Vision</h1>
                     <p>VUnited Care For Kids Inc (VanniShangam Vcarekids) is dedicated to becoming the foremost
                         organization in fostering communities with elevated living standards through the cultivation
-                        of an education-centric ethos and fostering a self-sustaining economy. We envision a future where every individual is empowered through education, leading to self-reliance and collective prosperity. By championing educational initiatives and sustainable economic practices, we strive to create vibrant communities where every member has the opportunity to thrive, thereby contributing to a brighter and more equitable society for generations to come.
+                        of an education-centric ethos and fostering a self-sustaining economy. We envision a future where every individual is empowered through education, leading to self-reliance and collective prosperity.
                     </p>
                 </div>
             </div>
@@ -306,7 +306,7 @@
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="event-box">
-                        <img src="public/assets/images/vanni.jpg" alt="" width="70%">
+                        <img src="public/assets/images/vanni.jpg" alt="" width="65%">
                     </div>
                 </div>
 
@@ -395,14 +395,11 @@
                 <div class="col-md-4 col-sm-12">
                     <h2>Useful Links</h2>
                     <ul class="list-unstyled link-list">
-                        <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="portfolio" href="#/portfolio">Portfolio</a><i class="fa fa-angle-right"></i>
-                        </li>
-                        <li><a ui-sref="products" href="#/products">Latest jobs</a><i class="fa fa-angle-right"></i>
-                        </li>
-                        <li><a ui-sref="gallery" href="#/gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="contact" href="#/contact">Contact us</a><i class="fa fa-angle-right"></i>
-                        </li>
+                        <li><a href="home">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="activity">Activity</a></li>
+                        <li><a href="events">Events</a></li>
+                        <li><a href="contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-12 map-img">
@@ -421,12 +418,11 @@
             <div class="nav-box row clearfix">
                 <div class="inner col-md-9 clearfix">
                     <ul class="footer-nav clearfix">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Servies</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="activity">Activity</a></li>
+                        <li><a href="events">Events</a></li>
+                        <li><a href="contact">Contact</a></li>
                     </ul>
 
 

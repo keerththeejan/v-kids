@@ -50,7 +50,7 @@
                                             <td>
 
                                                 <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($student->image); ?>"
-                                                    style="width:10%; margin:10px; border-rounded:50%;">
+                                                    style="width:10%; margin:10px;">
                                             </td>
                                             <td>
                                                 <div class="btn-group mb-3 btn-group-sm" role="group"
@@ -88,7 +88,7 @@
     <script>
         function confirmDelete(studentId) {
             if (confirm("Are you sure you want to delete this student?")) {
-                window.location.href = "{{ url('students/delete') }}/" + studentId;
+                window.location.href = "{{ url('studentdoc/delete') }}/" + studentId;
             }
         }
     </script>

@@ -20,7 +20,7 @@ class PdfDocumentController extends Controller
             ->join('students', 'pdf_documents.studentid', '=', 'students.id')
             ->where('pdf_documents.studentid', $id)
             ->get();
-            return view('students.fileview', compact('documents'));
+        return view('students.fileview', compact('documents'));
     }
 
 
@@ -81,19 +81,30 @@ class PdfDocumentController extends Controller
             'title' => 'required',
             'pdf' => 'required|mimes:pdf',
         ]);
-
-        $customFileName = $request->input('sid') . $request->input('title') . ".pdf";
-        $pdfPath = $request->file('pdf')->storeAs('pdfs', $customFileName);
-
-
-        PdfDocument::create([
-            'studentid' => $request->input('sid'),
-            'packageid' => $request->input('title'),
-            'title' => $request->input('sid') . $request->input('title'),
-            'path' =>  $pdfPath,
-        ]);
-
-        return redirect('document');
+        
+        $file = $request->file('pdf'); // Corrected file access
+        
+        // Ensure a file is uploaded before attempting to store it
+        if ($file) {
+            $filename = $request->input('sid') . $request->input('title') . ".pdf";
+        
+            // Store PDF in the public/pdf folder
+            $file->storeAs('public/pdf', $filename);
+        
+            // Create a record in the PdfDocument model
+            PdfDocument::create([
+                'studentid' => $request->input('sid'),
+                'packageid' => $request->input('title'),
+                'title' => $request->input('sid') . $request->input('title'),
+                'path' =>  $filename,
+            ]);
+        
+            return redirect('document'); // Redirect after successful upload
+        } else {
+            // Handle case where no file was uploaded
+            return back()->withInput()->withErrors(['pdf' => 'Please upload a PDF file.']);
+        }
+        
     }
 
     public function show($id)

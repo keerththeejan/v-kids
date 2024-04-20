@@ -89,7 +89,7 @@
                                         style="height:100%">
                                 </div>
                                 <div class="card-footer">
-                                    <a href="" class="btn btn-sm btn-primary" style="width: 100%;">Donate</a>
+                                    <a href="studmsg{{ $student->id }}" class="btn btn-sm btn-primary" style="width: 100%;">Donate</a>
                                 </div>
                             </div>
                         </div>

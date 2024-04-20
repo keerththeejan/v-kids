@@ -2,24 +2,7 @@
 
 use App\Http\Controllers\PdfDocumentController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StudentController;
-use App\Http\Controllers\DonarController;
-use App\Http\Controllers\DonateController;
-use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\PackageController;
-use App\Http\Controllers\Auth\RegisteredUserController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', [NewsController::class, 'showLatestNews']);
 
@@ -38,6 +21,7 @@ Route::get('student', 'App\Http\Controllers\studentcontroller@create');
 Route::get('students', 'App\Http\Controllers\studentcontroller@index');
 Route::POST('studentcreate', 'App\Http\Controllers\studentcontroller@store');
 Route::get('/students/delete/{id}', 'App\Http\Controllers\studentcontroller@destroy');
+Route::get('/studentdoc/delete/{id}', 'App\Http\Controllers\studentcontroller@destroy01');
 Route::get('supdate{id}', 'App\Http\Controllers\studentcontroller@edit');
 
 
@@ -66,8 +50,11 @@ Route::POST('/download.pdf', 'App\Http\Controllers\DownloadController@downloadPD
 Route::post('/download-zip', 'DownloadController@downloadZip')->name('download.zip');
 Route::get('/contact', 'App\Http\Controllers\ContactController@showForm');
 Route::get('/activity', 'App\Http\Controllers\NewsController@index');
-Route::POST('/contactstore', 'App\Http\Controllers\ContactController@store');
+Route::POST('/contactstore', 'App\Http\Controllers\contactController@save');
 Route::get('/contacts', 'App\Http\Controllers\ContactController@showForm');
 Route::get('/contacts/{id}','App\Http\Controllers\ContactController@showForm');
 Route::put('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
 Route::delete('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
+
+Route::get('event', 'App\Http\Controllers\eventcontroller@create');
+Route::get('studmsg{id}', 'App\Http\Controllers\ContactController@showstudent');

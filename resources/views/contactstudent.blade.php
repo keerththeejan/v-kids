@@ -79,11 +79,20 @@
 
             <div class="card mt-4">
                 <div class="card-body">
-                    <h2>Contact Us</h2>
-                    <form action="contactstore" method="POST">
+                    <h2>Student Help Contact us</h2> <hr>
+                    <form action="" method="POST">
+                    @csrf
+                        <div class="form-group">
+                            <label for="name">Student ID</label>
+                            <input type="text" id="sname" name="sname" class="form-control" value="{{ $student->id }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Student Name:</label>
+                            <input type="text" id="sname" name="sname" value="{{ $student->fullname }}" class="form-control" required>
+                        </div>
                         <div class="form-group">
                             <label for="name">Your Name:</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
+                            <input type="text" id="yname" name="yname" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Your Email:</label>

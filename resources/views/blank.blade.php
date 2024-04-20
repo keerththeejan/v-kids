@@ -11,13 +11,10 @@
             <div class="navbar-bg"></div>
             @include('top-nov')
             @include('sidenav')
-
-
             <div class="section-body">
                 <!-- add content here -->
                 <div class="main-content">
                     <section class="section">
-
 
                     </section>
                 </div>

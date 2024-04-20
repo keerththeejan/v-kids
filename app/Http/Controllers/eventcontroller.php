@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Student;
-use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
-class studentcontroller extends Controller
+class eventcontroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +13,7 @@ class studentcontroller extends Controller
      */
     public function index()
     {
-        $students = Student::all();
-        return view('students.view', compact('students'));
+        //
     }
 
     /**
@@ -26,7 +23,7 @@ class studentcontroller extends Controller
      */
     public function create()
     {
-        return view('students.create');
+        return view('event.create');
     }
 
     /**
@@ -37,22 +34,7 @@ class studentcontroller extends Controller
      */
     public function store(Request $request)
     {
-
-        $image = $request->file('photo');
-        $imageData = file_get_contents($image->getPathName());
-        $student = new Student([
-            'fullname' => $request->input('fullname'),
-            'parentname' => $request->input('parentname'),
-            'parentaddress' => $request->input('parentaddress'),
-            'permanentaddress' => $request->input('studentaddress'),
-            'dob' => $request->input('dob'),
-            'district' => $request->input('district'),
-            'image' => $imageData,
-        ]);
-
-        $student->save();
-        $students = Student::all();
-        return view('students.view', compact('students'));
+        //
     }
 
     /**
@@ -74,8 +56,7 @@ class studentcontroller extends Controller
      */
     public function edit($id)
     {
-        $student = Student::find($id);
-        return view('students.edit', compact('student'));
+        //
     }
 
     /**
@@ -98,16 +79,6 @@ class studentcontroller extends Controller
      */
     public function destroy($id)
     {
-        $student = Student::findOrFail($id);
-        $student->delete();
-        return redirect()->back()->with('message', 'Student deleted successfully');
-    }
-
-
-    public function destroy01($id)
-    {
-        $student = Pdf::findOrFail($id);
-        $student->delete();
-        return redirect()->back()->with('message', 'Student deleted successfully');
+        //
     }
 }

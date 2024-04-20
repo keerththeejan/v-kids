@@ -40,6 +40,14 @@
             </li>
 
             <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="film"></i><span>Events</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="event">Add New</a></li>
+                    <li><a class="nav-link" href="">Info</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="mail"></i><span>Messages</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="news">All</a></li>

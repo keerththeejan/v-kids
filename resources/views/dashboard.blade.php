@@ -13,7 +13,6 @@
             @include('top-nov')
             @include('sidenav')
 
-
             <div class="section-body">
                 <!-- add content here -->
                 <div class="main-content">
@@ -26,15 +25,20 @@
                                             <div class="row ">
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                                     <div class="card-content">
-                                                        <h5 class="font-15">students</h5>
+                                                        <h5 class="font-15">Students</h5>
                                                         <h2 class="mb-3 font-18"></h2>
-
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                                     <div class="banner-img">
-                                                        
+                                                        <h1>10</h1>
                                                     </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
+                                                    <a href="/students" style="text-align: center; text-decoration: none; color:black">See more</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -49,14 +53,19 @@
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                                     <div class="card-content">
                                                         <h5 class="font-15">Donars</h5>
-                                                        <h2 class="mb-3 font-18"></h2>
-
                                                     </div>
                                                 </div>
+
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                                     <div class="banner-img">
-                                                        <img src="public/adminpanel/img/banner/2.png" alt="">
+                                                        <h1>03</h1>
                                                     </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
+                                                    <a href="" style="text-align: center; text-decoration: none; color:black">See more</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -70,15 +79,22 @@
                                             <div class="row ">
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                                     <div class="card-content">
-                                                        <h5 class="font-15">New Project</h5>
+                                                        <h5 class="font-15">Events</h5>
                                                         <h2 class="mb-3 font-18"></h2>
-
                                                     </div>
                                                 </div>
+
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                                     <div class="banner-img">
-                                                        <img src="public/adminpanel/img/banner/3.png" alt="">
+                                                        <h1>03</h1>
                                                     </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
+                                                    <a href="" style="text-align: center; text-decoration: none; color:black">See more</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -93,14 +109,18 @@
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pr-0 pt-3">
                                                     <div class="card-content">
                                                         <h5 class="font-15">Activities</h5>
-                                                        <h2 class="mb-3 font-18"></h2>
 
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                                                     <div class="banner-img">
-                                                        <img src="public/adminpanel/img/banner/4.png" alt="">
+                                                        <h1>05</h1>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pr-0 pt-3">
+                                                    <a href="" style="text-align: center; text-decoration: none; color:black">See more</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,53 +130,18 @@
                         </div>
 
 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Recent Donars</h4>
-                                        <div class="card-header-form">
-                                            <form>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" placeholder="Search">
-                                                    <div class="input-group-btn">
-                                                        <button class="btn btn-primary"><i
-                                                                class="fas fa-search"></i></button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table table-striped">
-                                                <tr>
-
-                                                    <th>Task Name</th>
-                                                    <th>Members</th>
-                                                    <th>Task Status</th>
-                                                    
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="row">
                             <div class="col-md-6 col-lg-12 col-xl-6">
                                 <!-- Support tickets -->
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Support Ticket</h4>
-                                        <form class="card-header-form">
-                                            <input type="text" name="search" class="form-control"
-                                                placeholder="Search">
-                                        </form>
+                                        <h4>Donar</h4>
+                                        
                                     </div>
                                     <div class="card-body">
-                                        
-                                        
+
+
                                     </div>
                                     <a href="javascript:void(0)" class="card-footer card-link text-center small ">View
                                         All</a>
@@ -166,82 +151,11 @@
                             <div class="col-md-6 col-lg-12 col-xl-6">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Projects Payments</h4>
+                                        <h4>Recent Messages</h4>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
                                             <table class="table table-hover mb-0">
-                                                <thead>
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>Client Name</th>
-                                                        <th>Date</th>
-                                                        <th>Payment Method</th>
-                                                        <th>Amount</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>John Doe </td>
-                                                        <td>11-08-2018</td>
-                                                        <td>NEFT</td>
-                                                        <td>$258</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Cara Stevens
-                                                        </td>
-                                                        <td>15-07-2018</td>
-                                                        <td>PayPal</td>
-                                                        <td>$125</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>
-                                                            Airi Satou
-                                                        </td>
-                                                        <td>25-08-2018</td>
-                                                        <td>RTGS</td>
-                                                        <td>$287</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>
-                                                            Angelica Ramos
-                                                        </td>
-                                                        <td>01-05-2018</td>
-                                                        <td>CASH</td>
-                                                        <td>$170</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>5</td>
-                                                        <td>
-                                                            Ashton Cox
-                                                        </td>
-                                                        <td>18-04-2018</td>
-                                                        <td>NEFT</td>
-                                                        <td>$970</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>6</td>
-                                                        <td>
-                                                            John Deo
-                                                        </td>
-                                                        <td>22-11-2018</td>
-                                                        <td>PayPal</td>
-                                                        <td>$854</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7</td>
-                                                        <td>
-                                                            Hasan Basri
-                                                        </td>
-                                                        <td>07-09-2018</td>
-                                                        <td>Cash</td>
-                                                        <td>$128</td>
-                                                    </tr>
-                                                </tbody>
                                             </table>
                                         </div>
                                     </div>
@@ -260,13 +174,11 @@
                                     <h6 class="font-medium m-b-10">Select Layout</h6>
                                     <div class="selectgroup layout-color w-50">
                                         <label class="selectgroup-item">
-                                            <input type="radio" name="value" value="1"
-                                                class="selectgroup-input-radio select-layout" checked>
+                                            <input type="radio" name="value" value="1" class="selectgroup-input-radio select-layout" checked>
                                             <span class="selectgroup-button">Light</span>
                                         </label>
                                         <label class="selectgroup-item">
-                                            <input type="radio" name="value" value="2"
-                                                class="selectgroup-input-radio select-layout">
+                                            <input type="radio" name="value" value="2" class="selectgroup-input-radio select-layout">
                                             <span class="selectgroup-button">Dark</span>
                                         </label>
                                     </div>
@@ -275,18 +187,12 @@
                                     <h6 class="font-medium m-b-10">Sidebar Color</h6>
                                     <div class="selectgroup selectgroup-pills sidebar-color">
                                         <label class="selectgroup-item">
-                                            <input type="radio" name="icon-input" value="1"
-                                                class="selectgroup-input select-sidebar">
-                                            <span class="selectgroup-button selectgroup-button-icon"
-                                                data-toggle="tooltip" data-original-title="Light Sidebar"><i
-                                                    class="fas fa-sun"></i></span>
+                                            <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar">
+                                            <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip" data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
                                         </label>
                                         <label class="selectgroup-item">
-                                            <input type="radio" name="icon-input" value="2"
-                                                class="selectgroup-input select-sidebar" checked>
-                                            <span class="selectgroup-button selectgroup-button-icon"
-                                                data-toggle="tooltip" data-original-title="Dark Sidebar"><i
-                                                    class="fas fa-moon"></i></span>
+                                            <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" checked>
+                                            <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip" data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
                                         </label>
                                     </div>
                                 </div>
@@ -321,8 +227,7 @@
                                 <div class="p-15 border-bottom">
                                     <div class="theme-setting-options">
                                         <label class="m-b-0">
-                                            <input type="checkbox" name="custom-switch-checkbox"
-                                                class="custom-switch-input" id="mini_sidebar_setting">
+                                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" id="mini_sidebar_setting">
                                             <span class="custom-switch-indicator"></span>
                                             <span class="control-label p-l-10">Mini Sidebar</span>
                                         </label>
@@ -331,8 +236,7 @@
                                 <div class="p-15 border-bottom">
                                     <div class="theme-setting-options">
                                         <label class="m-b-0">
-                                            <input type="checkbox" name="custom-switch-checkbox"
-                                                class="custom-switch-input" id="sticky_header_setting">
+                                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" id="sticky_header_setting">
                                             <span class="custom-switch-indicator"></span>
                                             <span class="control-label p-l-10">Sticky Header</span>
                                         </label>
@@ -360,7 +264,7 @@
         @include('fooder')
 
     </div>
-   
+
     <script src="public/adminpanel/js/app.min.js"></script>
     <script src="public/adminpanel/js/scripts.js"></script>
     <script src="public/adminpanel/js/custom.js"></script>

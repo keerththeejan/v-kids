@@ -20,6 +20,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Full Name</th>
+                                    <th></th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -29,8 +30,12 @@
                                     @csrf
                                     @foreach ($documents as $document)
                                     <tr>
-                                        <td><input type="checkbox" name="selectedData[]" value="{{ $document->id }}"></td>
-                                        <td style="text-transform: capitalize;">{{ $document->title }}</td>
+                                        <td>{{ $document->title }}</td>
+                                        <td>{{ $document->name }}</td>
+
+                                        <td><a href="storage/app/public/pdf/{{ $document->title }}.pdf">
+                                                Download
+                                            </a></td>
                                         <td>
                                             <div class="btn-group mb-3 btn-group-sm" role="group" aria-label="Basic example">
                                                 <button class="btn btn-danger" onclick="confirmDelete('{{ $document->id }}')"><i class="fas fa-times"></i></button>
@@ -38,7 +43,7 @@
                                         </td>
                                     </tr>
                                     @endforeach
-                                    <button type="submit">Download PDF</button>
+
                                 </form>
                             </tbody>
                         </table>
@@ -50,6 +55,16 @@
             @include('theme')
         </div>
     </div>
+
+
+    <script>
+        function confirmDelete(studentId) {
+            if (confirm("Are you sure you want to delete this document?")) {
+                window.location.href = "{{ url('studentdoc/delete') }}/" + studentId;
+            }
+        }
+    </script>
+
 
     @include('fooder')
 
