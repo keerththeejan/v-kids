@@ -109,15 +109,6 @@
                                         </div>
 
 
-                                        <div class="form-group">
-                                            <label>Image</label>
-                                            <input type="file" name="photo" class="form-control" required="">
-                                            <div class="invalid-feedback">
-                                                Choose a photo file
-                                            </div>
-                                        </div>
-
-
                                     </div>
                                     <div class="card-footer text-right">
                                         <input type="submit" value="Update" name="update" class="btn btn-primary">

@@ -17,14 +17,38 @@
                     <section class="section">
                         <div class="row">
                             <div class="col-6 col-md-6 col-lg-6">
-                                <form class="needs-validation" novalidate="" method="post" action="filecreate" enctype="multipart/form-data">
+                                <form method="POST" action="filecreate" enctype="multipart/form-data">
                                     @csrf
+
                                     <div class="card-header">
                                         <h2>Student Files</h2>
                                     </div>
+                                    <br>
+                                    <div class="card-header-action">
+                                        <a href="students" class="btn btn-primary">
+                                            <i class="fas fa-user-info"></i> View Students
+                                        </a>
+                                    </div>
+
                                     <div class="card-body">
-
-
+                                        @if (session()->has('error'))
+                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                            <strong> {{ session('error') }}</strong>
+                                            <meta http-equiv='refresh' content='3'>
+                                        </div>
+                                        @endif
+                                        
+                                            
+                                            <input type="hidden" class="form-control" name="sid" value="{{ $students->id}}">
+                                            
+                                       
+                                        <div class="form-group">
+                                            <label>Student Name</label>
+                                            <input type="text" class="form-control" value="{{ $students->fullname}}">
+                                            <div class="invalid-feedback">
+                                                Select student Name
+                                            </div>
+                                        </div>
 
                                         <div class="form-group">
                                             <label>Document Type</label>
@@ -41,8 +65,6 @@
                                             </div>
                                         </div>
 
-
-
                                         <div class="form-group">
                                             <label>File</label>
                                             <input type="file" name="pdf" class="form-control" required="">
@@ -58,37 +80,36 @@
                                 </form>
                             </div>
                             <div class="col-6 col-md-6 col-lg-6">
-
+                                @if (session()->has('success'))
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <strong> {{ session('success') }}</strong>
+                                    <meta http-equiv='refresh' content='3'>
+                                </div>
+                                @endif
                                 <table class="table table-striped" id="table-1">
                                     <thead>
                                         <tr>
 
-                                            <th>Full Name</th>
+                                            <th>Document Name</th>
                                             <th></th>
-                                            <th>Action</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-
-                                        <form action="download.pdf" method="POST">
-                                            @csrf
-                                            @foreach ($documents as $document)
-                                            <tr>
-
-                                                <td>{{ $document->name }}</td>
-
-                                                <td><a href="storage/app/public/pdf/{{ $document->title }}.pdf">
-                                                        Download
-                                                    </a></td>
-                                                <td>
-                                                    <div class="btn-group mb-3 btn-group-sm" role="group" aria-label="Basic example">
-                                                        <button class="btn btn-danger" onclick="confirmDelete('{{ $document->id }}')"><i class="fas fa-times"></i></button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            @endforeach
-
-                                        </form>
+                                        @csrf
+                                        @foreach ($documents as $document)
+                                        <tr>
+                                            <td>{{ $document->name }}</td>
+                                            <td><a href="storage/app/public/pdf/{{ $document->title }}.pdf">
+                                                    Download
+                                                </a></td>
+                                            <td>
+                                                <div class="btn-group mb-3 btn-group-sm" role="group" aria-label="Basic example">
+                                                    <button class="btn btn-danger" onclick="confirmDelete('{{ $document->id }}')"><i class="fas fa-times"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

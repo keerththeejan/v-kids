@@ -28,7 +28,7 @@ Route::get('student', 'App\Http\Controllers\studentcontroller@create');
 Route::get('students', 'App\Http\Controllers\studentcontroller@index');
 Route::POST('studentcreate', 'App\Http\Controllers\studentcontroller@store');
 Route::get('/students/delete/{id}', 'App\Http\Controllers\studentcontroller@destroy');
-Route::get('/studentdoc/delete/{id}', 'App\Http\Controllers\studentcontroller@destroy01');
+Route::get('/studentdoc/delete/{id}', 'App\Http\Controllers\PdfDocumentController@destroy');
 Route::get('supdate{id}', 'App\Http\Controllers\studentcontroller@edit');
 
 
