@@ -17,21 +17,28 @@
                     <section class="section">
                         <div class="col-12 col-md-12 col-lg-12">
                             <div class="card">
-                                <div class="card-header">
-                                    <a href="students" class="btn btn-primary">
-                                        <i class="fas fa-user-info"></i> View Students
-                                    </a>
+                                @if (session()->has('message'))
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <strong> {{ session('message') }}</strong>
+                                    <meta http-equiv='refresh' content='3'>
                                 </div>
-                                <div class="card-header">
-                                    <h2>Edit Student</h2>
-                                </div>
-                                <form class="needs-validation" novalidate="" method="post" action="" enctype="multipart/form-data">
-                                    @csrf
+                                @endif
 
-                                    <div class="card-body">
-                                        <!-- Existing form fields -->
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h3>Edit Student</h3>
+                                    </div>
 
-                                        <input type="hidden" name="id" value="{{ $student->id }}">
+                                    <div class="card-header-action">
+                                        <a href="students" class="btn btn-primary">
+                                            <i class="fas fa-user-info"></i> View Students
+                                        </a>
+                                    </div>
+                                    <!-- Existing form fields -->
+                                    <br>
+                                    <form method="POST" action="stupdate" enctype="multipart/form-data">
+                                        @csrf
+                                        <input type="hidden" name="sid" value="{{ $student->id }}">
 
                                         <div class="form-group">
                                             <label>Student Full Name</label>
@@ -109,10 +116,10 @@
                                         </div>
 
 
-                                    </div>
-                                    <div class="card-footer text-right">
-                                        <input type="submit" value="Update" name="update" class="btn btn-primary">
-                                    </div>
+                                </div>
+                                <div class="card-footer text-right">
+                                    <input type="submit" value="Update" name="update" class="btn btn-primary">
+                                </div>
                                 </form>
                             </div>
                         </div>

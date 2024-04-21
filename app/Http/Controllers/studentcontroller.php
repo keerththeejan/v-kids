@@ -85,9 +85,18 @@ class studentcontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $student = Student::find($request->input('sid'));
+        $student->fullname = $request->input('fullname');
+        $student->parentname = $request->input('parentname');
+        $student->parentaddress = $request->input('parentaddress');
+        $student->permanentaddress = $request->input('studentaddress');
+        $student->dob = $request->input('dob');
+        $student->district = $request->input('district');
+        $student->save();
+        $students = Student::all();
+        return view('students.view', compact('students'));
     }
 
     /**
