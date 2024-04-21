@@ -20,7 +20,9 @@ Route::get('newses', [NewsController::class, 'index1']);
 Route::post('newscreate', [NewsController::class, 'store']);
 Route::get('news/delete/{id}', [NewsController::class, 'destroy']);
 
-Route::get('/contact', [ContactController::class, 'showForm']);
+
+Route::get('/contact', 'App\Http\Controllers\ContactController@showForm');
+
 Route::get('/msg{id}', [ContactController::class, 'edit']);
 
 
