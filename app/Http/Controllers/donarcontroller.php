@@ -71,7 +71,8 @@ class donarcontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $donar = Donar::find($id);
+        return view('donars.edit', compact('donar'));
     }
 
     /**
@@ -81,9 +82,16 @@ class donarcontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        
+        $donar = Donar::find($request->input('did'));
+        $donar->donarfullname = $request->input('dfullname');
+        $donar->email = $request->input('email');
+        $donar->phone = $request->input('phone');
+        $donar->Country = $request->input('country');
+        $donar->save();
+        $donors = Donar::all();
+        return view('donars.view', compact('donors'));
     }
 
     /**

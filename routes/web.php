@@ -16,12 +16,10 @@ require __DIR__.'/auth.php';
 Route::get('news', [NewsController::class, 'create']);
 Route::get('newsinfo', [NewsController::class, 'index']);
 Route::get('newses', [NewsController::class, 'index1']);
-
 Route::post('newscreate', [NewsController::class, 'store']);
 Route::get('news/delete/{id}', [NewsController::class, 'destroy']);
 
 Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.index');
-// Route::get('/contact', [ContactController::class, 'showForm']);
 Route::get('/msg{id}', [ContactController::class, 'edit']);
 
 
@@ -35,10 +33,11 @@ Route::get('supdate{id}', 'App\Http\Controllers\studentcontroller@edit');
 
 
 Route::get('donar', 'App\Http\Controllers\donarcontroller@create');
+Route::get('edit{id}', 'App\Http\Controllers\donarcontroller@edit');
 Route::get('donation', 'App\Http\Controllers\donarcontroller@createdonation');
-
 Route::get('donars', 'App\Http\Controllers\donarcontroller@index');
 Route::POST('donarcreate', 'App\Http\Controllers\donarcontroller@store');
+Route::POST('donarupdate', 'App\Http\Controllers\donarcontroller@update');
 Route::get('/donors/delete/{id}', 'App\Http\Controllers\donarcontroller@destroy');
 Route::get('Donate', 'App\Http\Controllers\Donatecontroller@index');
 

@@ -11,7 +11,6 @@
             <div class="navbar-bg"></div>
             @include('top-nov')
             @include('sidenav')
-
             <div class="section-body">
                 <!-- add content here -->
                 <div class="main-content">
@@ -19,27 +18,21 @@
                         <div class="section-header">
                             <h1>Add News</h1>
                         </div>
-
                         <div class="section-body">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-body">
-
-                                            <!-- Add your form here -->
                                             <form action="newscreate" method="POST" enctype="multipart/form-data">
                                                 @csrf
-
                                                 <div class="form-group">
                                                     <label for="title">Title</label>
-                                                    <input type="text" name="title" id="title"
-                                                        class="form-control" required>
+                                                    <input type="text" name="title" id="title" class="form-control" required>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label for="link">Link</label>
-                                                    <input type="text" name="link" id="link"
-                                                        class="form-control" required>
+                                                    <input type="text" name="link" id="link" class="form-control" required>
                                                 </div>
 
                                                 <div class="form-group">
@@ -49,7 +42,7 @@
 
                                                 <div class="form-group">
                                                     <label>Image</label>
-                                                    <input type="file" name="photo" class="form-control"required="">
+                                                    <input type="file" name="photo" class="form-control" required="">
                                                     <div class="invalid-feedback">
                                                         Choose a photo file
                                                     </div>
@@ -57,8 +50,6 @@
 
                                                 <button type="submit" class="btn btn-primary">Submit</button>
                                             </form>
-                                            <!-- End of your form -->
-
                                         </div>
                                     </div>
                                 </div>

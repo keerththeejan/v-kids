@@ -3,8 +3,6 @@
 
 <head>
     @include('script')
-
-
 </head>
 
 <body>
@@ -38,14 +36,11 @@
                                         <tr>
                                             <td style="text-transform: capitalize;">{{ $donor->donarfullname }}</td>
                                             <td style="text-transform: capitalize;">{{ $donor->email }}</td>
-                                            
                                             <td>
-
-
                                                 <div class="btn-group mb-3 btn-group-sm" role="group"
                                                     aria-label="Basic example">
                                                     <!-- Add Edit and Delete buttons -->
-                                                    <a href="{{ $donor->id }}" class="btn btn-warning"><i
+                                                    <a href="edit{{ $donor->id }}" class="btn btn-warning"><i
                                                             class="far fa-edit"></i></a>
                                                     <button class="btn btn-danger"
                                                         onclick="confirmDelete('{{ $donor->id }}')"><i
