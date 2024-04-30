@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\contactController;
+use App\Http\Controllers\donarcontroller;
 use App\Http\Controllers\PdfDocumentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
@@ -39,7 +40,8 @@ Route::get('donars', 'App\Http\Controllers\donarcontroller@index');
 Route::POST('donarcreate', 'App\Http\Controllers\donarcontroller@store');
 Route::POST('donarupdate', 'App\Http\Controllers\donarcontroller@update');
 Route::get('/donors/delete/{id}', 'App\Http\Controllers\donarcontroller@destroy');
-Route::get('Donate', 'App\Http\Controllers\Donatecontroller@index');
+
+Route::get('Donate',  [donarcontroller::class, 'donate']);
 
 Route::get('/studentsinfo', [welcomeController::class, 'index']);
 Route::get('/package', [packageController::class, 'create']);
@@ -67,6 +69,6 @@ Route::put('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
 Route::delete('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
 
 Route::get('event', 'App\Http\Controllers\eventcontroller@create');
-Route::get('studmsg{id}', [App\Http\Controllers\ContactController::class, 'showstudent']);
+Route::get('studmsg{id}', [App\Http\Controllers\contactController::class, 'showstudent']);
 
 Route::get('messages', 'App\Http\Controllers\ContactController@index1');
