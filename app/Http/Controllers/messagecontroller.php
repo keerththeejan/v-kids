@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class messagecontroller extends Controller
@@ -61,7 +62,8 @@ class messagecontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $student = Message::find($id);
+        return view('msgshow', compact('student'));
     }
 
     /**

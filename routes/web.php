@@ -22,7 +22,7 @@ Route::post('newscreate', [NewsController::class, 'store']);
 Route::get('news/delete/{id}', [NewsController::class, 'destroy']);
 
 Route::get('/contact', [messagecontroller::class, 'showForm']);
-Route::get('/msg{id}', [ContactController::class, 'edit']);
+Route::get('/msg{id}', [messagecontroller::class, 'edit']);
 
 
 Route::get('student', 'App\Http\Controllers\studentcontroller@create');
