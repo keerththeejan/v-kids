@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\contactController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\donarcontroller;
 use App\Http\Controllers\PdfDocumentController;
 use Illuminate\Support\Facades\Route;
@@ -12,7 +12,7 @@ Route::get('/', [NewsController::class, 'showLatestNews']);
 Route::get('/dashboard', [welcomeController::class, 'dashboard']);
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 Route::get('news', [NewsController::class, 'create']);
 Route::get('newsinfo', [NewsController::class, 'index']);
@@ -20,8 +20,8 @@ Route::get('newses', [NewsController::class, 'index1']);
 Route::post('newscreate', [NewsController::class, 'store']);
 Route::get('news/delete/{id}', [NewsController::class, 'destroy']);
 
-Route::get('/contact', [App\Http\Controllers\ContactController::class, 'showForm'])->name('contact.index');
-Route::get('/msg{id}', [App\Http\Controllers\ContactController::class, 'edit']);
+Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.index');
+Route::get('/msg{id}', [ContactController::class, 'edit']);
 
 
 Route::get('student', 'App\Http\Controllers\studentcontroller@create');
@@ -64,11 +64,11 @@ Route::POST('/contactstore', 'App\Http\Controllers\contactController@save');
 Route::POST('/smsg', 'App\Http\Controllers\contactController@smsgsave');
 
 Route::get('/contacts', 'App\Http\Controllers\ContactController@showForm');
-Route::get('/contacts/{id}','App\Http\Controllers\ContactController@showForm');
+Route::get('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
 Route::put('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
 Route::delete('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
 
 Route::get('event', 'App\Http\Controllers\eventcontroller@create');
-Route::get('studmsg{id}', [App\Http\Controllers\contactController::class, 'showstudent']);
+Route::get('studmsg{id}', [ContactController::class, 'showstudent']);
 
 Route::get('messages', 'App\Http\Controllers\ContactController@index1');
