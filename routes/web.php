@@ -19,8 +19,8 @@ Route::get('newses', [NewsController::class, 'index1']);
 Route::post('newscreate', [NewsController::class, 'store']);
 Route::get('news/delete/{id}', [NewsController::class, 'destroy']);
 
-Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.index');
-Route::get('/msg{id}', [ContactController::class, 'edit']);
+Route::get('/contact', [App\Http\Controllers\ContactController::class, 'showForm'])->name('contact.index');
+Route::get('/msg{id}', [App\Http\Controllers\ContactController::class, 'edit']);
 
 
 Route::get('student', 'App\Http\Controllers\studentcontroller@create');
@@ -67,6 +67,6 @@ Route::put('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
 Route::delete('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
 
 Route::get('event', 'App\Http\Controllers\eventcontroller@create');
-Route::get('studmsg{id}', [ContactController::class, 'showstudent']);
+Route::get('studmsg{id}', [App\Http\Controllers\ContactController::class, 'showstudent']);
 
 Route::get('messages', 'App\Http\Controllers\ContactController@index1');
