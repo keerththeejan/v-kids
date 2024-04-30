@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\donarcontroller;
+use App\Http\Controllers\messagecontroller;
 use App\Http\Controllers\PdfDocumentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
@@ -20,7 +21,7 @@ Route::get('newses', [NewsController::class, 'index1']);
 Route::post('newscreate', [NewsController::class, 'store']);
 Route::get('news/delete/{id}', [NewsController::class, 'destroy']);
 
-Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.index');
+Route::get('/contact', [messagecontroller::class, 'showForm']);
 Route::get('/msg{id}', [ContactController::class, 'edit']);
 
 
