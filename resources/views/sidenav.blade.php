@@ -50,8 +50,8 @@
             <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="mail"></i><span>Messages</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="news">All</a></li>
-                    <li><a class="nav-link" href="newsinfo">Read</a></li>
+                    <li><a class="nav-link" href="messages">All</a></li>
+                    <li><a class="nav-link" href="message">Read</a></li>
                 </ul>
             </li>
 

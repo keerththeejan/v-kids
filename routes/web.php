@@ -60,6 +60,7 @@ Route::post('/download-zip', 'DownloadController@downloadZip')->name('download.z
 Route::get('/activity', 'App\Http\Controllers\NewsController@index');
 Route::POST('/contactstore', 'App\Http\Controllers\contactController@save');
 Route::POST('/smsg', 'App\Http\Controllers\contactController@smsgsave');
+
 Route::get('/contacts', 'App\Http\Controllers\ContactController@showForm');
 Route::get('/contacts/{id}','App\Http\Controllers\ContactController@showForm');
 Route::put('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm');
@@ -67,3 +68,5 @@ Route::delete('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm
 
 Route::get('event', 'App\Http\Controllers\eventcontroller@create');
 Route::get('studmsg{id}', [ContactController::class, 'showstudent']);
+
+Route::get('messages', 'App\Http\Controllers\ContactController@index1');

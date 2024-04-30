@@ -54,6 +54,12 @@ class ContactController extends Controller
         return view('contacts_list', ['contacts' => $contacts]);
     }
 
+    public function index1()
+    {
+        $contacts = Message::all();
+        return view('messages.view', ['contacts' => $contacts]);
+    }
+
     public function edit($id)
     {
         $student = Message::find($id);
