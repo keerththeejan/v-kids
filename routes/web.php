@@ -23,6 +23,8 @@ Route::get('news/delete/{id}', [NewsController::class, 'destroy']);
 
 Route::get('/contact', [messagecontroller::class, 'showForm']);
 Route::get('/msg{id}', [messagecontroller::class, 'edit']);
+Route::get('messages', [messagecontroller::class, 'index1']);
+
 
 
 Route::get('student', 'App\Http\Controllers\studentcontroller@create');
@@ -72,4 +74,3 @@ Route::delete('/contacts/{id}', 'App\Http\Controllers\ContactController@showForm
 Route::get('event', 'App\Http\Controllers\eventcontroller@create');
 Route::get('studmsg{id}', [ContactController::class, 'showstudent']);
 
-Route::get('messages', 'App\Http\Controllers\ContactController@index1');

@@ -17,6 +17,12 @@ class messagecontroller extends Controller
         //
     }
 
+    public function index1()
+    {
+        $contacts = Message::all();
+        return view('messages.view', ['contacts' => $contacts]);
+    }
+
     public function showForm()
     {
         return view('contact');
